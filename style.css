@@ -116,9 +116,9 @@ form .btn-login {
   }
 }
 .formularioSumir{
-  animation: paraBaixo 1s;
+  animation: paraBaixo 500ms;
   animation-fill-mode: forwards;
-
+  animation-timing-function: ease-in-out;
 }
 
 @keyframes paraBaixo {
@@ -126,6 +126,53 @@ form .btn-login {
         transform: translateY(0);
   }
   to{    
-        transform: translateY(100vh);
+        transform: translateY(90vh);
   }
+}
+.validacao{
+  animation: naoValido 200ms, aparecer paused ;
+  animation-iteration-count: 2;
+  animation-timing-function: linear;
+}
+
+@keyframes naoValido {
+  from, to{       
+        transform: translateX(0);
+  }
+  35%{    
+        transform: translateX(-30%);
+  }
+  70%{    
+        transform: translateX(30%);
+  }
+}
+
+body{
+  overflow: hidden;
+}
+
+.quadrados li{
+  width: 40px;
+  height: 40px;
+  background-color: #746bee3d;
+  display: block;
+  position: absolute;
+  animation: subir infinite;
+  animation-direction: alternate;
+
+}
+
+@keyframes subir {
+  from{    
+        opacity: 0;   
+        transform: translateY(0) rotate(960deg);
+  }
+  50%{
+        opacity: 1;
+  }
+  to{  
+        opacity: 0;  
+        transform: translateY(-900px);
+  }
+
 }
