@@ -46,7 +46,7 @@ form.addEventListener("animationend",(event)=>{
 // background quadrados
 const ulQuadrados = document.querySelector("ul.quadrados")
 
-for (let i = 0; i < 11; i++) {
+for (let i = 0; i < 21; i++) {
   const li = document.createElement("li");
 
   const randomizar = (min,max) => Math.random() * (max - min) + min
