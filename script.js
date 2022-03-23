@@ -54,14 +54,14 @@ for (let i = 0; i < 11; i++) {
 
   const tamanho = Math.floor(randomizar(10,120));
   
-  const posicao = randomizar(1,90)
+  const posicao = randomizar(1,200)
   const delay = randomizar(0.1,5)
   const duracao = randomizar(5,30)
 
   li.style.width = `${tamanho}px`;
   li.style.height = `${tamanho}px`;
   
-  li.style.bottom = `-${tamanho}px`;
+  li.style.bottom = `${tamanho}px`;
     
   li.style.left = `${posicao}%` ;
 

@@ -116,16 +116,21 @@ form .btn-login {
   }
 }
 .formularioSumir{
-  animation: paraBaixo 500ms;
+  animation: paraBaixo 1s;
   animation-fill-mode: forwards;
-  animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in;
 }
 
 @keyframes paraBaixo {
-  from{       
-        transform: translateY(0);
+  from{  
+        opacity: 0;     
+        transform: translateY(0) rotate(960deg);
+  }
+  50%{
+        opacity: 1;
   }
   to{    
+        opacity: 0; 
         transform: translateY(90vh);
   }
 }
@@ -157,8 +162,11 @@ body{
   background-color: #746bee3d;
   display: block;
   position: absolute;
-  animation: subir infinite;
-  animation-direction: alternate;
+  animation: subir infinite; 
+  animation-direction: reverse;
+  border-radius: 10%;
+  
+
 
 }
 
@@ -172,7 +180,7 @@ body{
   }
   to{  
         opacity: 0;  
-        transform: translateY(-900px);
+        transform: translateY(-90vh);
   }
 
 }
