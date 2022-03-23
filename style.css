@@ -1,0 +1,131 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100vh;
+}
+
+body {
+  background-color: #3e0be6;
+  font-family: Roboto, Arial, sans-serif;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  font-size: 32px;
+  letter-spacing: 1px;
+  margin: 20px 0;
+  color: white;
+}
+
+form {
+  margin: 20px 0;
+  background-color: #746bee;
+  padding: 30px 25px;
+  border-radius: 5px;
+}
+
+form .input-block {
+  margin-bottom: 20px;
+}
+
+form .input-block label {
+  font-size: 14px;
+  color: rgb(253, 253, 253);
+}
+
+form .input-block input {
+  width: 100%;
+  display: block;
+  margin-top: 8px;
+  padding: 7px;
+  font-size: 16px;
+  color: #3e0be6;;
+  border-radius: 2px;
+  border: 1px solid #ccddef;
+  outline-color: #3e0be6;;
+}
+
+form .btn-login {
+  display: block;
+  min-width: 120px;
+  border: none;
+  background-color: #3e0be6;;
+  color: white;
+  border-radius: 25px;
+  margin: auto;
+  padding: 7px;
+}
+
+/*Aparição do form*/
+form {
+  /* animation-name: aparecer;
+  animation-duration: 500ms; */
+  animation: aparecer 700ms;
+  overflow: hidden; /*para o campo não aparecer fora do form durante a animação*/
+}
+
+@keyframes aparecer{
+   from{
+        opacity: 0;
+        transform: scale(0.8); /* diminui*/
+   }
+   to{
+        opacity: 1;
+        transform: scale(1); /* aumenta*/
+   }
+}
+
+form .input-block {
+  animation: mover 700ms;
+  /* animation-delay: 500ms; */
+}
+form .input-block:nth-child(1) {
+  animation-delay: 50ms;
+}
+form .input-block:nth-child(2) {
+  animation-delay: 300ms;
+  animation-fill-mode: backwards;
+}
+
+form .btn-login {
+  animation: mover 700ms;
+  animation-delay: 600ms;
+  animation-fill-mode: backwards;
+}
+
+@keyframes mover{
+  from{
+       opacity: 0;
+       transform: translatex(-35%);
+  }
+  to{
+       opacity: 1;
+       transform: translatex(0);
+    
+  }
+}
+.formularioSumir{
+  animation: paraBaixo 1s;
+  animation-fill-mode: forwards;
+
+}
+
+@keyframes paraBaixo {
+  from{       
+        transform: translateY(0);
+  }
+  to{    
+        transform: translateY(100vh);
+  }
+}
